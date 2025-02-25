@@ -9,8 +9,9 @@ function Child({ lastName }){
     return (
         <>
             <h3>
-                Hello I am the child and my last name is {lastName}
-                and my second last name is {theSecondLastName}
+                <p>
+                    Hello I am the child my last name is {lastName} and my second last name is {theSecondLastName}
+                </p>
             </h3>
             <Grandchild lastNameAgain={lastName} />
         </>
