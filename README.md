@@ -47,7 +47,7 @@ Task 3: Parent Component
 - make a const named drilledLastName inside of the Parent function and set it equal to any last name(string)
 - add {drilledLastName} to your return statement in Parent.jsx. Pay attention to the app to notice changes
 
-Task 4: Child Component
+Task 4: Child Component Prop Drill
 - In Parent.jsx add <Child lastName={drilledLastName} /> to the return statment. This sends the Child a property (prop) lastName, and the value of the drilledLastName variable. 
 - create a Child.jsx file in the component folder
 - import React from 'react'
@@ -55,7 +55,16 @@ Task 4: Child Component
 - Import child into Parent.jsx
 ** You should see lines of text from parent and child in the browser.
 
-Task 5: Grandchild Component
+Task 5: Grandchild Component Prop Drill
 - Create Grandchild.jsx, pass the last name prop to the grandchild, and display another line of text in the browser 
 
+Task 6: Create Context for Second Last Name
+- create LastNameContext.jsx in content folder
+- import { createContext } from 'react';
+- make a const LastNameContext variable and set it equal to createContext('Doe'). This sets the default last name
+- export default LastNameContext;
 
+- import LastNameContext from '../context/LastnameContext'; in Parent.jsx
+- Add const secondLastName = 'Johnson'; to the function
+- Wrap the return statment with <LastNameContext.Provider value={secondLastName}><LastNameContext.Provider>
+- Add const theSecondLastName = useContext(LastNameContext); to the function in Child.jsx
